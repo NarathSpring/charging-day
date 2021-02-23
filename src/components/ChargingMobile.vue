@@ -1,15 +1,21 @@
 <template>
   <swiper ref="mySwiper" :options="swiperOptions" class="swiper-container">
-    <swiper-slide class="slide1">1111111111111111</swiper-slide>
-    <swiper-slide class="slide2">22222222222222222</swiper-slide>
-    <swiper-slide class="slide3">33333333333333333</swiper-slide>
+    <swiper-slide class="slide1"><Slide1 /></swiper-slide>
+    <swiper-slide class="slide2"><Slide2 /></swiper-slide>
+    <swiper-slide class="slide3"><Slide3 /></swiper-slide>
   </swiper>
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-property-decorator";
+import { Vue, Component } from "vue-property-decorator";
 import { SwiperOptions } from "swiper";
+import Slide1 from "./Slide1.vue";
+import Slide2 from "./Slide2.vue";
+import Slide3 from "./Slide3.vue";
 
+@Component({
+  components: { Slide1, Slide2, Slide3 }
+})
 export default class ChargingMobile extends Vue {
   swiperOptions: SwiperOptions = {
     effect: "fade",
@@ -26,13 +32,13 @@ swiper-slide {
   height: 300px;
 }
 .slide1 {
-  background: blue;
+  background: white;
 }
 .slide2 {
-  background: red;
+  background: white;
 }
 .slide3 {
-  background: yellow;
+  background: white;
 }
 .swiper-container {
   width: 100%;
