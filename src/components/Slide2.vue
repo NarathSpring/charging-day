@@ -22,9 +22,8 @@ export default class Slide1 extends Vue {
   g1 = require("../assets/2_g1.png");
   imgUrl = [
     require("../assets/2_g1.png"),
-    require("../assets/2_g2.png"),
-    require("../assets/2_g3.png"),
-    require("../assets/2_g4.png")
+    require("../assets/2_g2.png")
+    
   ];
 }
 </script>
@@ -44,7 +43,7 @@ img {
 .battery {
   width: 55%;
   /* top: 240px; */
-  bottom: 0;
+  bottom: -10%;
 }
 @font-face {
   font-family: "cc";
